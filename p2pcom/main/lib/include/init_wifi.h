@@ -1,0 +1,58 @@
+#ifndef INIT_WIFI_HPP
+#define INIT_WIFI_HPP
+
+#if CONFIG_ESPNOW_WIFI_MODE_STATION
+#define ESPNOW_WIFI_MODE WIFI_MODE_STA
+#define ESPNOW_WIFI_IF   WIFI_IF_STA
+#else
+#define ESPNOW_WIFI_MODE WIFI_MODE_AP
+#define ESPNOW_WIFI_IF   WIFI_IF_AP
+#endif
+
+#include "esp_wifi.h"
+
+#include "esp_log.h"
+#include "esp_system.h"
+
+#include "globals.h"
+#include "send.h"
+
+#define SSID "Grabner_2.4GHz_Buero"
+#define PASS "erDWue8crs"
+
+static esp_now_peer_info_t peer = {0};
+
+#define WIFI_CONNECTED_BIT BIT0
+#define WIFI_FAIL_BIT      BIT1
+
+#if SWITCH == 0
+extern EventGroupHandle_t tcp_ip_event_group;
+#endif
+
+#if SWITCH == 1
+extern uint8_t last_good_channel;
+#endif
+
+esp_err_t init(void);
+
+esp_err_t deinit(void);
+
+esp_err_t set_mode(void);
+
+esp_err_t set_mac(uint8_t mac[6]);
+
+esp_err_t get_mac(uint8_t mac[6]);
+
+bool set_up_tcpip_stack(wifi_config_t conf);
+
+static void set_channel(uint8_t channel);
+
+#if SWITCH == 0
+void tcpip_setup_task(void *pvParameters);
+#endif
+
+#if SWITCH == 1
+bool hopping_channel(void);
+#endif
+
+#endif // INIT_WIFI_HPPyy

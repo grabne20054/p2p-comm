@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/mgrabner18/Projekte/p2p-comm/p2pcom/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
